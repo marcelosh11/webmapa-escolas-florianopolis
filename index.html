@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Escolas Municipais de Florianópolis</title>
+
+    <!-- CSS do Leaflet -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- CSS do nosso projeto -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Escolas municipais de Ensino Fundamental</h1>
+        <p>
+            Florianópolis - SC |
+            Dados: planilha fornecida |
+            Geocodificação por endereço
+        </p>
+    </header>
+
+    <main>
+
+        <aside>
+
+            <label for="busca">Buscar escola</label>
+
+            <input
+                type="text"
+                id="busca"
+                placeholder="Digite o nome da escola"
+                autocomplete="off"
+            >
+
+            <p id="status" role="status">
+                Carregando escolas...
+            </p>
+
+            <div class="acoes">
+
+                <button id="iniciar">
+                    Iniciar geocodificação
+                </button>
+
+                <button id="limpar">
+                    Limpar cache
+                </button>
+
+            </div>
+
+            <p class="aviso">
+                O processo pode demorar.
+                Uma consulta por segundo,
+                sem coordenadas na base original.
+                Os resultados são guardados apenas
+                no navegador para evitar novas consultas.
+            </p>
+
+            <div id="lista"></div>
+
+        </aside>
+
+        <div id="map"></div>
+
+    </main>
+
+    <!-- JavaScript do Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- JavaScript do nosso projeto -->
+    <script src="script.js"></script>
+
+</body>
+</html>
